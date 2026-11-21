@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Resep - Dapur Nusantara</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                Dapur<span>Nusantara</span>
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="resep.html" class="active">Resep</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- JUDUL HALAMAN -->
+    <section class="judul-resep">
+        <p class="subjudul">KOLEKSI DAPUR NUSANTARA</p>
+        <h1>Temukan Resep Favoritmu</h1>
+        <p>
+            Pilih berbagai resep masakan lezat dan mudah
+            dibuat untuk hidangan sehari-hari.
+        </p>
+    </section>
+
+    <!-- PENCARIAN -->
+    <section class="area-resep">
+
+        <div class="pencarian">
+            <input
+                type="text"
+                id="cariResep"
+                placeholder="Cari nama masakan..."
+                onkeyup="cariResep()"
+            >
+            <button type="button" onclick="cariResep()">
+                Cari
+            </button>
+        </div>
+
+        <!-- KATEGORI -->
+        <div class="kategori">
+            <button class="kategori-btn aktif"
+                onclick="filterKategori('semua', this)">
+                Semua
+            </button>
+
+            <button class="kategori-btn"
+                onclick="filterKategori('makanan', this)">
+                Makanan
+            </button>
+
+            <button class="kategori-btn"
+                onclick="filterKategori('minuman', this)">
+                Minuman
+            </button>
+
+            <button class="kategori-btn"
+                onclick="filterKategori('camilan', this)">
+                Camilan
+            </button>
+        </div>
+
+        <!-- DAFTAR KARTU RESEP -->
+        <div class="daftar-resep" id="daftarResep">
+
+            <!-- RESEP 1 -->
+            <div class="resep-item" data-kategori="makanan">
+                <img
+                    src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500"
+                    alt="Nasi Goreng"
+                >
+
+                <div class="isi-resep">
+                    <span class="label-kategori">Makanan</span>
+                    <h3>Nasi Goreng</h3>
+                    <p>
+                        Nasi goreng sederhana dengan bumbu
+                        pilihan yang lezat.
+                    </p>
+                    <a href="detail.html">Lihat Resep →</a>
+                </div>
+            </div>
+
+            <!-- RESEP 2 -->
+            <div class="resep-item" data-kategori="makanan">
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?w=500"
+                    alt="Sayur Sehat"
+                >
+
+                <div class="isi-resep">
+                    <span class="label-kategori">Makanan</span>
+                    <h3>Sayur Sehat</h3>
+                    <p>
+                        Hidangan sayuran segar yang cocok
+                        untuk menu keluarga.
+                    </p>
+                    <a href="detail.html">Lihat Resep →</a>
+                </div>
+            </div>
+
+            <!-- RESEP 3 -->
+            <div class="resep-item" data-kategori="makanan">
+                <img
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500"
+                    alt="Sate Ayam"
+                >
+
+                <div class="isi-resep">
+                    <span class="label-kategori">Makanan</span>
+                    <h3>Sate Ayam</h3>
+                    <p>
+                        Sate ayam dengan bumbu kacang
+                        yang gurih dan nikmat.
+                    </p>
+                    <a href="detail.html">Lihat Resep →</a>
+                </div>
+            </div>
+
+            <!-- RESEP 4 -->
+            <div class="resep-item" data-kategori="minuman">
+                <img
+                    src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500"
+                    alt="Es Buah"
+                >
+
+                <div class="isi-resep">
+                    <span class="label-kategori">Minuman</span>
+                    <h3>Es Buah</h3>
+                    <p>
+                        Minuman segar dengan campuran
+                        aneka buah-buahan.
+                    </p>
+                    <a href="detail.html">Lihat Resep →</a>
+                </div>
+            </div>
+
+            <!-- RESEP 5 -->
+            <div class="resep-item" data-kategori="minuman">
+                <img
+                    src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500"
+                    alt="Jus Buah"
+                >
+
+                <div class="isi-resep">
+                    <span class="label-kategori">Minuman</span>
+                    <h3>Jus Buah</h3>
+                    <p>
+                        Jus buah segar yang mudah dibuat
+                        di rumah.
+                    </p>
+                    <a href="detail.html">Lihat Resep →</a>
+                </div>
+            </div>
+
+            <!-- RESEP 6 -->
+            <div class="resep-item" data-kategori="camilan">
+                <img
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500"
+                    alt="Pizza"
+                >
+
+                <div class="isi-resep">
+                    <span class="label-kategori">Camilan</span>
+                    <h3>Pizza Rumahan</h3>
+                    <p>
+                        Camilan praktis dengan topping
+                        sesuai selera.
+                    </p>
+                    <a href="detail.html">Lihat Resep →</a>
+                </div>
+            </div>
+
+
+<!-- Rendang -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600" alt="Rendang">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Rendang</h3>
+        <p>Masakan daging khas Padang dengan bumbu rempah.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Soto Ayam -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600" alt="Soto Ayam">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Soto Ayam</h3>
+        <p>Sup ayam hangat dengan kuah gurih dan segar.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Bakso -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600" alt="Bakso">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Bakso</h3>
+        <p>Bakso dengan kuah hangat yang lezat.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Gado-Gado -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600" alt="Gado-Gado">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Gado-Gado</h3>
+        <p>Sayuran segar dengan saus kacang yang nikmat.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Mie Goreng -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600" alt="Mie Goreng">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Mie Goreng</h3>
+        <p>Mie goreng sederhana dengan sayuran dan telur.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Ayam Geprek -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=600" alt="Ayam Geprek">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Ayam Geprek</h3>
+        <p>Ayam renyah dengan sambal yang menggugah selera.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Nasi Uduk -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600" alt="Nasi Uduk">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Nasi Uduk</h3>
+        <p>Nasi gurih dengan santan dan aneka pelengkap.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Pempek -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="Pempek">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Pempek</h3>
+        <p>Makanan khas Palembang dengan kuah cuko.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Rawon -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600" alt="Rawon">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Rawon</h3>
+        <p>Sup daging khas Jawa Timur dengan kuah kluwek.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Sate Padang -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600" alt="Sate Padang">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Sate Padang</h3>
+        <p>Sate dengan kuah kental berbumbu rempah.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Ayam Bakar -->
+<div class="resep-item" data-kategori="makanan">
+    <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=600" alt="Ayam Bakar">
+    <div class="isi-resep">
+        <span class="label-kategori">Makanan</span>
+        <h3>Ayam Bakar</h3>
+        <p>Ayam berbumbu yang dipanggang hingga matang.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Martabak Telur -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600" alt="Martabak Telur">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Martabak Telur</h3>
+        <p>Camilan gurih dengan isian telur dan sayuran.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+
+<!-- Es Teh Manis -->
+<div class="resep-item" data-kategori="minuman">
+    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600" alt="Es Teh Manis">
+    <div class="isi-resep">
+        <span class="label-kategori">Minuman</span>
+        <h3>Es Teh Manis</h3>
+        <p>Minuman teh segar dengan rasa manis.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Es Jeruk -->
+<div class="resep-item" data-kategori="minuman">
+    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600" alt="Es Jeruk">
+    <div class="isi-resep">
+        <span class="label-kategori">Minuman</span>
+        <h3>Es Jeruk</h3>
+        <p>Minuman jeruk segar dengan tambahan es batu.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Es Cendol -->
+<div class="resep-item" data-kategori="minuman">
+    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600" alt="Es Cendol">
+    <div class="isi-resep">
+        <span class="label-kategori">Minuman</span>
+        <h3>Es Cendol</h3>
+        <p>Minuman tradisional dengan cendol, santan, dan gula merah.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Es Kopi Susu -->
+<div class="resep-item" data-kategori="minuman">
+    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Es Kopi Susu">
+    <div class="isi-resep">
+        <span class="label-kategori">Minuman</span>
+        <h3>Es Kopi Susu</h3>
+        <p>Perpaduan kopi, susu, dan es yang nikmat.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Matcha Latte -->
+<div class="resep-item" data-kategori="minuman">
+    <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=600" alt="Matcha Latte">
+    <div class="isi-resep">
+        <span class="label-kategori">Minuman</span>
+        <h3>Matcha Latte</h3>
+        <p>Minuman teh hijau dengan campuran susu.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Jus Mangga -->
+<div class="resep-item" data-kategori="minuman">
+    <img src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600" alt="Jus Mangga">
+    <div class="isi-resep">
+        <span class="label-kategori">Minuman</span>
+        <h3>Jus Mangga</h3>
+        <p>Jus buah mangga dengan rasa manis dan segar.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Jus Alpukat -->
+<div class="resep-item" data-kategori="minuman">
+    <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=600" alt="Jus Alpukat">
+    <div class="isi-resep">
+        <span class="label-kategori">Minuman</span>
+        <h3>Jus Alpukat</h3>
+        <p>Jus alpukat lembut yang mudah dibuat di rumah.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Jus Stroberi -->
+<div class="resep-item" data-kategori="minuman">
+    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600" alt="Jus Stroberi">
+    <div class="isi-resep">
+        <span class="label-kategori">Minuman</span>
+        <h3>Jus Stroberi</h3>
+        <p>Jus stroberi segar dengan warna yang menarik.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Es Teler -->
+<div class="resep-item" data-kategori="minuman">
+    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600" alt="Es Teler">
+    <div class="isi-resep">
+        <span class="label-kategori">Minuman</span>
+        <h3>Es Teler</h3>
+        <p>Minuman buah dengan alpukat, kelapa, dan nangka.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Pisang Goreng -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600" alt="Pisang Goreng">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Pisang Goreng</h3>
+        <p>Pisang dengan lapisan tepung renyah dan manis.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Risoles -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=600" alt="Risoles">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Risoles</h3>
+        <p>Kulit lembut dengan isian sayuran yang gurih.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Lumpia -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="Lumpia">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Lumpia</h3>
+        <p>Gorengan berisi sayuran dengan kulit renyah.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Cireng -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600" alt="Cireng">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Cireng</h3>
+        <p>Camilan khas Sunda berbahan dasar tepung tapioka.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Tahu Crispy -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600" alt="Tahu Crispy">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Tahu Crispy</h3>
+        <p>Tahu dengan lapisan tepung yang gurih dan renyah.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Bakwan Sayur -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600" alt="Bakwan Sayur">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Bakwan Sayur</h3>
+        <p>Gorengan sayur dengan rasa gurih dan lezat.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Donat -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600" alt="Donat">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Donat</h3>
+        <p>Kue lembut dengan aneka pilihan topping.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Klepon -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600" alt="Klepon">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Klepon</h3>
+        <p>Kue tradisional berisi gula merah dan kelapa parut.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Martabak Manis -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600" alt="Martabak Manis">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Martabak Manis</h3>
+        <p>Kue manis dengan topping cokelat dan keju.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Singkong Goreng -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600" alt="Singkong Goreng">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Singkong Goreng</h3>
+        <p>Singkong gurih yang cocok menjadi teman bersantai.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Brownies -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600" alt="Brownies">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Brownies</h3>
+        <p>Kue cokelat lembut dengan rasa manis.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+<!-- Bola-Bola Kentang -->
+<div class="resep-item" data-kategori="camilan">
+    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600" alt="Bola-Bola Kentang">
+    <div class="isi-resep">
+        <span class="label-kategori">Camilan</span>
+        <h3>Bola-Bola Kentang</h3>
+        <p>Camilan kentang berbentuk bola yang gurih.</p>
+        <a href="detail.html" class="tombol-resep">Lihat Resep</a>
+    </div>
+</div>
+
+
+        </div>
+
+        <!-- PESAN JIKA RESEP TIDAK DITEMUKAN -->
+        <p id="pesanKosong">
+            Resep tidak ditemukan.
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            &copy; 2026 Dapur Nusantara.
+            Semua Hak Dilindungi.
+        </p>
+    </footer>
+
+    <!-- JAVASCRIPT PENCARIAN DAN KATEGORI -->
+    <script>
+        let kategoriAktif = "semua";
+
+        function tampilkanResep() {
+            const input = document.getElementById("cariResep");
+            const kataKunci = input.value.toLowerCase();
+
+            const semuaResep = document.querySelectorAll(".resep-item");
+            let jumlahTampil = 0;
+
+            semuaResep.forEach(function(resep) {
+                const nama = resep.querySelector("h3")
+                    .textContent.toLowerCase();
+
+                const kategori = resep.dataset.kategori;
+
+                const cocokNama = nama.includes(kataKunci);
+
+                const cocokKategori =
+                    kategoriAktif === "semua" ||
+                    kategori === kategoriAktif;
+
+                if (cocokNama && cocokKategori) {
+                    resep.style.display = "block";
+                    jumlahTampil++;
+                } else {
+                    resep.style.display = "none";
+                }
+            });
+
+            document.getElementById("pesanKosong").style.display =
+                jumlahTampil === 0 ? "block" : "none";
+        }
+
+        function cariResep() {
+            tampilkanResep();
+        }
+
+        function filterKategori(kategori, tombol) {
+            kategoriAktif = kategori;
+
+            document.querySelectorAll(".kategori-btn")
+                .forEach(function(btn) {
+                    btn.classList.remove("aktif");
+                });
+
+            tombol.classList.add("aktif");
+
+            tampilkanResep();
+        }
+    </script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
